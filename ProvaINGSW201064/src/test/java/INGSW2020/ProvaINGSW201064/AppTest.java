@@ -1,6 +1,7 @@
 package INGSW2020.ProvaINGSW201064;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -23,43 +24,25 @@ public class AppTest
     @Test
     public void ordineCrescenteWorks(){
        
-    	ArrayList<Integer> l = new ArrayList<Integer>();
-        l.add(3);
-        l.add(7);
-        l.add(21);
-        l.add(2);
-        l.add(54);
-        l.add(7);
-        
-        ArrayList<Integer> m = new ArrayList<Integer>();
-        m.add(1);
-        m.add(2);
-        m.add(11);
-        m.add(45);
-        m.add(55);
-        m.add(56);
-        
-        
-        assertEquals(m, myList.ordineCrescente(l));
+    	int[] a = {1, 5, 17, 36, 80, 91};
+    	int[] testA = {80, 91, 1, 17, 5, 36};
+    	
+    	assertTrue(a.equals(myList.ordineCrescente(testA)));
+    	
+    	int[] b = {1, 21, 144, 231, 988, 1000};
+    	int[] testB = {1000, 21, 231, 144, 1, 988};
+    	assertTrue(b.equals(myList.ordineCrescente(testB)));
     }
     
     @Test
     public void ordineDecrescenteWorks() {
-    	ArrayList<Integer> l = new ArrayList<Integer>();
-        l.add(56);
-        l.add(11);
-        l.add(45);
-        l.add(55);
-        l.add(2);
-        l.add(1);
-        
-        ArrayList<Integer> m = new ArrayList<Integer>();
-        m.add(56);
-        m.add(55);
-        m.add(45);
-        m.add(11);
-        m.add(2);
-        m.add(1);
-        assertEquals(m, myList.ordineCrescente(l));
+    	int[] a = {91, 80, 36, 17, 5, 1};
+    	int[] testA = {80, 91, 1, 17, 5, 36};
+    	
+    	assertTrue(a.equals(myList.ordineCrescente(testA)));
+    	
+    	int[] b = {1000, 988, 231, 144, 21, 1};
+    	int[] testB = {1000, 21, 231, 144, 1, 988};
+    	assertTrue(b.equals(myList.ordineCrescente(testB)));
     }
 }
